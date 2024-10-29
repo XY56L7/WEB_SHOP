@@ -1,0 +1,29 @@
+[
+    {
+        "Id": 1,
+        "Name": "4K TV",
+        "Description": "High-definition television with 4K resolution",
+        "Price": 999.99,
+        "PcitureUrl": "https://example.com/images/4ktv.jpg",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Id": 2,
+        "Name": "Sofa",
+        "Description": "Comfortable living room sofa",
+        "Price": 399.99,
+        "PcitureUrl": "https://example.com/images/sofa.jpg",
+        "ProductTypeId": 2,
+        "ProductBrandId": 3
+    },
+    {
+        "Id": 3,
+        "Name": "Jeans",
+        "Description": "Stylish blue jeans",
+        "Price": 49.99,
+        "PcitureUrl": "https://example.com/images/jeans.jpg",
+        "ProductTypeId": 3,
+        "ProductBrandId": 2
+    }
+]
