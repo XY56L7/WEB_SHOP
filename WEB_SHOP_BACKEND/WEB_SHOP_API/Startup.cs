@@ -15,6 +15,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WEB_SHOP_API.Data;
+using WEB_SHOP_REPOSITORY.Interfaces;
+using WEB_SHOP_REPOSITORY.Repositories;
 
 namespace WEB_SHOP_API
 {
@@ -31,6 +33,7 @@ namespace WEB_SHOP_API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
             services.AddControllers();
             services.AddDbContext<StoreContext>(x => 
             x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));

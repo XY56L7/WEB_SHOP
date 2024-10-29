@@ -1497,13 +1497,13 @@
     },
     "WEB_SHOP_MODELS/1.0.0": {
       "type": "project",
-      "path": "../Models/WEB_SHOP_MODELS.csproj",
-      "msbuildProject": "../Models/WEB_SHOP_MODELS.csproj"
+      "path": "../WEB_SHOP_Models/WEB_SHOP_MODELS.csproj",
+      "msbuildProject": "../WEB_SHOP_Models/WEB_SHOP_MODELS.csproj"
     },
     "WEB_SHOP_REPOSITORY/1.0.0": {
       "type": "project",
-      "path": "../Repository/WEB_SHOP_REPOSITORY.csproj",
-      "msbuildProject": "../Repository/WEB_SHOP_REPOSITORY.csproj"
+      "path": "../WEB_SHOP_Repository/WEB_SHOP_REPOSITORY.csproj",
+      "msbuildProject": "../WEB_SHOP_Repository/WEB_SHOP_REPOSITORY.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1546,11 +1546,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Martin\\Desktop\\Projektek\\WEB_SHOP\\WEB_SHOP_BACKEND\\Models\\WEB_SHOP_MODELS.csproj": {
-              "projectPath": "C:\\Users\\Martin\\Desktop\\Projektek\\WEB_SHOP\\WEB_SHOP_BACKEND\\Models\\WEB_SHOP_MODELS.csproj"
+            "C:\\Users\\Martin\\Desktop\\Projektek\\WEB_SHOP\\WEB_SHOP_BACKEND\\WEB_SHOP_Models\\WEB_SHOP_MODELS.csproj": {
+              "projectPath": "C:\\Users\\Martin\\Desktop\\Projektek\\WEB_SHOP\\WEB_SHOP_BACKEND\\WEB_SHOP_Models\\WEB_SHOP_MODELS.csproj"
             },
-            "C:\\Users\\Martin\\Desktop\\Projektek\\WEB_SHOP\\WEB_SHOP_BACKEND\\Repository\\WEB_SHOP_REPOSITORY.csproj": {
-              "projectPath": "C:\\Users\\Martin\\Desktop\\Projektek\\WEB_SHOP\\WEB_SHOP_BACKEND\\Repository\\WEB_SHOP_REPOSITORY.csproj"
+            "C:\\Users\\Martin\\Desktop\\Projektek\\WEB_SHOP\\WEB_SHOP_BACKEND\\WEB_SHOP_Repository\\WEB_SHOP_REPOSITORY.csproj": {
+              "projectPath": "C:\\Users\\Martin\\Desktop\\Projektek\\WEB_SHOP\\WEB_SHOP_BACKEND\\WEB_SHOP_Repository\\WEB_SHOP_REPOSITORY.csproj"
             }
           }
         }
