@@ -193,3 +193,5 @@ C:\Users\Martin\Desktop\Projektek\WEB_SHOP\WEB_SHOP_BACKEND\WEB_SHOP_API\obj\Deb
 C:\Users\Martin\Desktop\Projektek\WEB_SHOP\WEB_SHOP_BACKEND\WEB_SHOP_API\obj\Debug\net5.0\WEB_SHOP_API.pdb
 C:\Users\Martin\Desktop\Projektek\WEB_SHOP\WEB_SHOP_BACKEND\WEB_SHOP_API\obj\Debug\net5.0\WEB_SHOP_API.genruntimeconfig.cache
 C:\Users\Martin\Desktop\Projektek\WEB_SHOP\WEB_SHOP_BACKEND\WEB_SHOP_API\obj\Debug\net5.0\ref\WEB_SHOP_API.dll
+C:\Users\Martin\Desktop\Projektek\WEB_SHOP\WEB_SHOP_BACKEND\WEB_SHOP_API\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Martin\Desktop\Projektek\WEB_SHOP\WEB_SHOP_BACKEND\WEB_SHOP_API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

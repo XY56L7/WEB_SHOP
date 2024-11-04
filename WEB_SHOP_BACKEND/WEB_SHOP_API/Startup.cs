@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -15,6 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WEB_SHOP_API.Data;
+using WEB_SHOP_API.Helpers;
 using WEB_SHOP_REPOSITORY.Interfaces;
 using WEB_SHOP_REPOSITORY.Repositories;
 
@@ -34,6 +36,7 @@ namespace WEB_SHOP_API
         {
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
+            services.AddAutoMapper(typeof(MappingProfiles));
             services.AddControllers();
             services.AddDbContext<StoreContext>(x => 
             x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
