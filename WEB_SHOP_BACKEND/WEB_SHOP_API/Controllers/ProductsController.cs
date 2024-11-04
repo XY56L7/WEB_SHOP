@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WEB_SHOP_API.Data;
+using WEB_SHOP_API.Dto;
 using WEB_SHOP_API.Entities;
 using WEB_SHOP_REPOSITORY.Interfaces;
+using WEB_SHOP_REPOSITORY.Specifications;
 
 namespace WEB_SHOP_API.Controllers
 {
@@ -27,11 +29,22 @@ namespace WEB_SHOP_API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Product>>> GetProducts()
+        public async Task<ActionResult<List<ProductToReturnDto>>> GetProducts()
         {
-            var products = await ProductsRepo.ListAllAsync();
+            var spec = new ProductsWithBrandsAndTypesSpecification();
 
-            return Ok(products);
+            var products = await ProductsRepo.ListAync(spec);
+
+            return Ok(products.Select(x => new ProductToReturnDto 
+            {
+                Id = x.Id,
+                Description = x.Description,
+                Name = x.Name,
+                PcitureUrl = x.PcitureUrl,
+                Price = x.Price,
+                ProductBrand = x.ProductBrand.Name,
+                ProductType = x.ProductType.Name
+            }).ToList());
         }
 
         [HttpGet("brands")]
@@ -46,9 +59,22 @@ namespace WEB_SHOP_API.Controllers
             return Ok(await ProductTypeRepo.ListAllAsync());
         }
         [HttpGet("{id}")]
-        public async Task<ActionResult<Product>> GetProduct(int id)
+        public async Task<ActionResult<ProductToReturnDto>> GetProduct(int id)
         {
-            return await ProductsRepo.GetByIdAsync(id);
+            var spec = new ProductsWithBrandsAndTypesSpecification(id);
+
+            var product = await ProductsRepo.GetEntityWithSpec(spec);
+
+            return new ProductToReturnDto
+            {
+                Id = product.Id,
+                Description = product.Description,
+                Name = product.Name,
+                PcitureUrl = product.PcitureUrl,
+                Price = product.Price,
+                ProductBrand = product.ProductBrand.Name,
+                ProductType = product.ProductType.Name
+            };
         }
     }
 }

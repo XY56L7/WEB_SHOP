@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WEB_SHOP_API.Data;
 using WEB_SHOP_REPOSITORY.Interfaces;
+using WEB_SHOP_REPOSITORY.Specifications;
 
 namespace WEB_SHOP_REPOSITORY.Repositories
 {
@@ -27,6 +28,21 @@ namespace WEB_SHOP_REPOSITORY.Repositories
         public async Task<IReadOnlyList<T>> ListAllAsync()
         {
             return await context.Set<T>().ToListAsync();
+        }
+
+        public async Task<IReadOnlyList<T>> ListAync(ISpecifications<T> spec)
+        {
+            return await ApplySpecifications(spec).ToListAsync();
+        }
+
+        public async Task<T> GetEntityWithSpec(ISpecifications<T> spec)
+        {
+            return await ApplySpecifications(spec).FirstOrDefaultAsync();
+        }
+
+        private IQueryable<T> ApplySpecifications(ISpecifications<T> specifications) 
+        {
+            return SpecificationEvaluater<T>.GetQuery(context.Set<T>().AsQueryable(),specifications);
         }
     }
 }

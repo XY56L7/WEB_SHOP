@@ -11,5 +11,7 @@ namespace WEB_SHOP_REPOSITORY.Interfaces
     {
         Task<T> GetByIdAsync(int id);
         Task<IReadOnlyList<T>> ListAllAsync();
+        Task<T> GetEntityWithSpec(ISpecifications<T> spec);
+        Task<IReadOnlyList<T>> ListAync(ISpecifications<T> spec);
     }
 }
